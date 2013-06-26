@@ -63,7 +63,7 @@ public class Calculator extends JFrame{
 	private OctalButton octalButton;
 	/**16進数ボタン*/
 	private HexButton hexButton;
-	
+
 	/**数字ボタン画像*/
 	private ImageIcon numberButtonIcon0 = new ImageIcon("src/scientific_calculator/images/0ButtonIcon.gif");
 	private ImageIcon numberButtonIcon1 = new ImageIcon("src/scientific_calculator/images/1ButtonIcon.gif");
@@ -125,7 +125,7 @@ public class Calculator extends JFrame{
 	private ImageIcon octalButtonIcon = new ImageIcon("src/scientific_calculator/images/octalButtonIcon.gif");
 	/**16進数ボタン画像*/
 	private ImageIcon hexButtonIcon = new ImageIcon("src/scientific_calculator/images/hexButtonIcon.gif");
-	
+
 	/**関数電卓(main)*/
 	public static void main(String[] args){
 		Calculator calculator = new Calculator();
@@ -137,7 +137,7 @@ public class Calculator extends JFrame{
 		initFields();
 		initGUI();
 	}
-	
+
 	/**関数電卓の属性を初期化する*/
 	public void initFields(){
 		displayArea = new DisplayArea();
@@ -147,11 +147,11 @@ public class Calculator extends JFrame{
 			numberButton[i].setIcon(numberButtonIcons[i]);
 			add(numberButton[i]);
 		}
-		
-		piButton = new NumberButton("", displayArea);
+
+		piButton = new NumberButton("π", displayArea);
 		napierButton = new NumberButton("e", displayArea);
 		clearButton = new ClearButton(displayArea);
-		
+
 		// new arithmeticUnit
 		arithmeticUnit = new ArithmeticUnit(displayArea);
 		equalButton = new EqualButton("=", arithmeticUnit);
@@ -159,14 +159,14 @@ public class Calculator extends JFrame{
 		minusButton = new OperateButton("-", displayArea);
 		multiplyButton = new OperateButton("*", displayArea);
 		divideButton = new OperateButton("/", displayArea);
-		
+
 		factorialButton = new OperateButton("!", displayArea);
 		logarithmsButton = new OperateButton("Log", displayArea);
 		logarithmsNaturalButton = new OperateButton("ln", displayArea);
 		sinButton = new OperateButton("Sin", displayArea);
 		cosButton = new OperateButton("Cos", displayArea);
 		tanButton = new OperateButton("Tan", displayArea);
-		
+
 		squareButton = new OperateButton("x²", displayArea);
 		cubeButton = new OperateButton("x³", displayArea);
 		nTimesPowerButton = new OperateButton("xⁿ", displayArea);
@@ -174,7 +174,7 @@ public class Calculator extends JFrame{
 		rightBracketButton = new OperateButton(")", displayArea);
 		radixPointButton = new OperateButton(".", displayArea);
 		removeButton = new RemoveButton(displayArea);
-		
+
 		binaryButton = new BinaryButton("2",displayArea);
 		octalButton = new OctalButton("8",displayArea);
 		hexButton = new HexButton("16",displayArea);
@@ -186,6 +186,7 @@ public class Calculator extends JFrame{
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(600, 370);
 		setLocation(100, 100);
+		setResizable(false);
 		setLayout(null);
 
 		// new and add DisplayArea.
@@ -303,6 +304,6 @@ public class Calculator extends JFrame{
 		add(removeButton);
 
 	}
-	
+
 
 }

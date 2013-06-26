@@ -20,8 +20,9 @@ public class ArithmeticUnit{
 		try{
 			ScriptEngineManager factory = new ScriptEngineManager();
 			ScriptEngine engine = factory.getEngineByName("JavaScript");
-			double result = (Double) engine.eval(getScript());
-			result = Double.valueOf((Double.toString(result).format("%.10f", result)));
+			//double result = (Double) engine.eval(getScript());
+			//result = Double.valueOf((Double.toString(result).format("%.10f", result)));
+			String result = Double.toString((Double) engine.eval(getScript()));
 			displayArea.setText("" + result);
 			Runtime r = Runtime.getRuntime();
 			try{
